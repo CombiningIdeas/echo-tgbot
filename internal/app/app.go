@@ -18,6 +18,6 @@ func runServer(ctx context.Context) {
 
 }
 
-func printStartMessage(cfg *config.Config) {
-
-}
+//func printStartMessage(cfg *config.Config) {
+//
+//}

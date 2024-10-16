@@ -1,4 +1,4 @@
-module Echo-tgbot
+module echo-tgbot
 
 go 1.23.1
 
