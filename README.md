@@ -5,6 +5,8 @@
 
 ## Goals for creating a bot :star:
 
+The bot will be created in telegram. :airplane:
+
 The main goals that the author pursues when creating a bot:
 + Write a functional telegram bot. :stars:
 + When writing a project, use the principles of clean architecture and clean 
