@@ -1,5 +1,8 @@
 # echo-tgbot
 
+![Badge for project ](https://github.com/user-attachments/assets/9ff9c410-e129-4652-b0b9-7f2a204f916c)
+
+
 ## Goals for creating a bot :star:
 
 The main goals that the author pursues when creating a bot:
