@@ -15,6 +15,8 @@
 
 ### API Part :star:
 
+![executers](https://github.com/user-attachments/assets/77c8b9bb-4f8d-452d-ba4e-767299d67425)
+
 Telegram supports 2 types of executers - Long Polling and Webhook.
 Long Polling is sending requests to telegrams in order to receive
 updates. And Webhook is the acceptance of requests from the telegram itself. 
@@ -26,6 +28,6 @@ So we will not create an API folder and describe our own API there for processin
 HTTP requests, as this will slow down development (so I believe that we are not 
 violating the clean architecture). If you still have questions about this point, 
 you can google it on the Internet, chat-GPT or go follow the link and 
-read the article I proposed, translating it into English or any other language
+read the article I proposed, translating it into English or any other language.
 
 [![link_to_article](https://img.shields.io/badge/link_to_article-119812)](https://grammy.dev/ru/guide/deployment-types)
