@@ -1,3 +1,5 @@
+### At the moment, 2 out of 3 goals have been achieved locally, in the process the last functional part related to saving links is being written, the necessary comments are added and unnecessary ones are removed, large code is decomposed into small files for more convenient reading of the code :watch:
+
 # echo-tgbot :white_check_mark:
 
 ![Badge for project ](https://github.com/user-attachments/assets/9ff9c410-e129-4652-b0b9-7f2a204f916c)
