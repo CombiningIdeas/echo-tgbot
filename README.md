@@ -1,4 +1,4 @@
-### At the moment, 2 out of 3 goals have been achieved locally, in the process the last functional part related to saving links is being written, the necessary comments are added and unnecessary ones are removed, large code is decomposed into small files for more convenient reading of the code :watch:
+<!-- ### At the moment, 2 out of 3 goals have been achieved locally, in the process the last functional part related to saving links is being written, the necessary comments are added and unnecessary ones are removed, large code is decomposed into small files for more convenient reading of the code :watch: -->
 
 # echo-tgbot :white_check_mark:
 
