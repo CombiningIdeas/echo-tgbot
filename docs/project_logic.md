@@ -13,6 +13,17 @@
 
 ## Description :white_check_mark:
 
+Before describing what logic was implemented at each level, I would like to highlight one of 
+the SOLID principles that I adhered to - the principle of "dependency inversion", which states 
+that classes should depend on abstractions, not on specific details. In other words, this means 
+that top-level abstractions should not depend on lower-level abstractions, usually the top level 
+is the API level, it should not depend on the specific implementation of the repository level 
+and the service level, that is, the base levels. And they should all be connected exclusively 
+by abstractions, not by concrete implementations, but by abstractions. The same applies to the 
+service level, it should not depend on the repository level.
+
+---
+
 ### API Part :star:
 
 ![executers](https://github.com/user-attachments/assets/77c8b9bb-4f8d-452d-ba4e-767299d67425)
@@ -31,3 +42,4 @@ you can google it on the Internet, chat-GPT or go follow the link and
 read the article I proposed, translating it into English or any other language.
 
 [![link_to_article](https://img.shields.io/badge/link_to_article-119812)](https://grammy.dev/ru/guide/deployment-types)
+
