@@ -16,7 +16,7 @@ func MainKeyboard() *telego.ReplyKeyboardMarkup {
 				tu.KeyboardButton("Link saving mode"),
 			},
 			{
-				tu.KeyboardButton("Alarm mode using messages"),
+				tu.KeyboardButton("Timer mode using messages"),
 			},
 		},
 		ResizeKeyboard: true, OneTimeKeyboard: false, InputFieldPlaceholder: "Choose of the options",
@@ -78,6 +78,9 @@ func ListSavedLinksKeyboard() *telego.ReplyKeyboardMarkup {
 				tu.KeyboardButton("⤴️ Come back #2"),
 				// for ... (list of links in the database, with numbering)
 				//When you click the button, the URL of the selected link will be copied to the clipboard.
+			},
+			{
+				tu.KeyboardButton("Show list of my links"),
 			},
 		},
 		ResizeKeyboard: true, OneTimeKeyboard: false, InputFieldPlaceholder: "Choose of the options",
