@@ -22,7 +22,8 @@ and the service level, that is, the base levels. And they should all be connecte
 by abstractions, not by concrete implementations, but by abstractions. The same applies to the 
 service level, it should not depend on the repository level.
 
----
+--- 
+<br>
 
 ### API Part :star:
 
@@ -43,3 +44,12 @@ read the article I proposed, translating it into English or any other language.
 
 [![link_to_article](https://img.shields.io/badge/link_to_article-119812)](https://grammy.dev/ru/guide/deployment-types)
 
+## Services Part :fire:
+
+![telegram bot logic](https://github.com/user-attachments/assets/ad39202f-0859-4878-96cd-90bedcf9fa63)
+
+In the service layer, we have implemented all the basic logic of the bot's telegrams, in this layer the bot's operation is described in the message repeat mode and in the timer (alarm) mode of messages. The logic of these two tasks is fully implemented in the service layer, since I decided that accessing the database does not make sense for them, perhaps except for the timer (alarm) mode of messages, but I initially set myself the goal of making this bot functionality without resorting to the database in order to train and learn new material.
+
+The only logic that required the repository layer (database accesses) This is the function of saving the links sent by the user and deleting these links by the user himself if desired. To implement this idea, the use of a database is ideal, I called this logic "link mode".
+
+Although initially reviewing the code, it seems that the "link mode" mode in the bot required more lines of code than the "timer mode" mode, in fact, the code in the "link mode" mode looks more beautiful and more readable, SQL queries to the database are immediately visible there and this gives better readability.
