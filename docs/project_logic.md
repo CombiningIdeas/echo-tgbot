@@ -23,7 +23,6 @@ by abstractions, not by concrete implementations, but by abstractions. The same 
 service level, it should not depend on the repository level.
 
 --- 
-<br>
 
 ### API Part :star:
 
@@ -78,3 +77,45 @@ this for the sake of three files and not so much logic, and I transferred the da
 through the "bot_logic_handler" file, and there I just used the structure I needed (to 
 transfer the necessary data), which I had created before, and the instance of which (the 
 object) is in the "app.go" file in the "app" package.
+
+## Repository(Database) part :computer:
+
+To begin with, the project decided to connect to a database and use PostgreSQL (since it 
+is an open source relational database management system). To work with PostgreSQL, an 
+extension of the SQL language called PL/pgSQL is used. The DBMS is supported on UNIX-like 
+operating systems (for example, FreeBSD and the Linux family) and Windows OS. It is precisely 
+because of its widespread availability and high flexibility that we use this database.
+
+On this layer of the bot architecture (repository layer or database layer), we create a 
+table via goose. Goose is one of the schema (database) migration tools, small but very 
+simple. It's written in Go. If we had created the table simply through pgAdmin 4 manually, 
+we would not have been able to track changes in the databases and roll back to them, as 
+git allows us to do with regular code, for example.
+
+In the following path - "internal/repository/repository.go" - a database connection is 
+stored, where we transfer this connection to the global variable "Database" with the data 
+type "*sql.DB". This is all necessary so that we can use this variable from any package 
+simply by connecting the current package "repository". Because we will have to use queries 
+to the database via SQL.
+
+---
+
+## ORM or SQL? What to choose? :neutral_face:
+
+![SQL or ORM](https://github.com/user-attachments/assets/dd711116-ab39-4307-9ab7-c568eb2251a7)
+
+In my project, I chose to use SQL queries instead of using ORM queries, because although 
+ORM has higher performance on small projects, SQL has higher performance on large projects, 
+and my project is small. This is because, if anything, ORM is not portable and requires both 
+knowledge of SQL queries and reading the documentation on this ORM, yes, it provides safer 
+access to the database, but it requires more effort than just learning SQL, and in general, 
+SQL is known to everyone and can be read by any programmer, but with ORMs are becoming more 
+difficult, they can be different from each other, and even more so they look different in 
+different programming languages, and SQL queries always look the same. Well, for greater 
+security, you can simply use database migrations and, if necessary, store several copies 
+of the databases, so that in case of permanent deletion on the project, you can return 
+the data back from the database copy, the usual backup.
+
+---
+
+# End of documentation :snowflake:
