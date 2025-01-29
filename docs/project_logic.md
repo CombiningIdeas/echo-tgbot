@@ -48,8 +48,33 @@ read the article I proposed, translating it into English or any other language.
 
 ![telegram bot logic](https://github.com/user-attachments/assets/ad39202f-0859-4878-96cd-90bedcf9fa63)
 
-In the service layer, we have implemented all the basic logic of the bot's telegrams, in this layer the bot's operation is described in the message repeat mode and in the timer (alarm) mode of messages. The logic of these two tasks is fully implemented in the service layer, since I decided that accessing the database does not make sense for them, perhaps except for the timer (alarm) mode of messages, but I initially set myself the goal of making this bot functionality without resorting to the database in order to train and learn new material.
+In the service layer, we have implemented all the basic logic of the bot's telegrams, 
+in this layer the bot's operation is described in the message repeat mode and in the 
+timer (alarm) mode of messages. The logic of these two tasks is fully implemented in 
+the service layer, since I decided that accessing the database does not make sense for them,
+perhaps except for the timer (alarm) mode of messages, but I initially set myself the goal 
+of making this bot functionality without resorting to the database in order to train 
+and learn new material.
 
-The only logic that required the repository layer (database accesses) This is the function of saving the links sent by the user and deleting these links by the user himself if desired. To implement this idea, the use of a database is ideal, I called this logic "link mode".
+The only logic that required the repository layer (database accesses) This is the 
+function of saving the links sent by the user and deleting these links by the user 
+himself if desired. To implement this idea, the use of a database is ideal, I called 
+this logic "link mode".
 
-Although initially reviewing the code, it seems that the "link mode" mode in the bot required more lines of code than the "timer mode" mode, in fact, the code in the "link mode" mode looks more beautiful and more readable, SQL queries to the database are immediately visible there and this gives better readability.
+Although initially reviewing the code, it seems that the "link mode" mode in the bot 
+required more lines of code than the "timer mode" mode, in fact, the code in the "link mode" 
+mode looks more beautiful and more readable, SQL queries to the database are immediately 
+visible there and this gives better readability.
+
+### Additional comment (required reading) to the services part :v:
+
+Also, in the implementation of the service logic, I used access through the object and 
+its methods 1 time when I created the "HandlerStruct" structure in the "services" package 
+in the "services.go", and 1 more time I decided not to resort to using the structure, its 
+objects, interfaces and methods, instead, in the package "mode_logic_handlers" I used only 
+functions for all files, because I thought it made no sense only for the logic of the bot, 
+to create an additional structure, its objects, write a constructor and interface and all 
+this for the sake of three files and not so much logic, and I transferred the data I needed 
+through the "bot_logic_handler" file, and there I just used the structure I needed (to 
+transfer the necessary data), which I had created before, and the instance of which (the 
+object) is in the "app.go" file in the "app" package.
